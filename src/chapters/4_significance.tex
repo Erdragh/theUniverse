@@ -54,3 +54,21 @@ $$
 At this point, we know that each person $x$ has a pair of parents. These could be other people, or the parents of $x$
 could be $a$ and $e$. We have also defined what it means to be significant. In our case it means that the formula $\text{isSignificant}(x)$
 is true for the given $x$. We have also said that there exists at least one person, who is significant.
+
+So, why did we do all of this? So I can give you a formal declaration of yourself, which would be the following:
+
+$$
+\text{isYou}(x) ::= P(x) \wedge \neg\text{isSignificant}(x)
+$$
+
+What does this mean, you ask? It means that while you're a person, you aren't significant. Since "isSignificant" is a conjunction of
+$P(x)$ and an inner disjunction $K(x) \vee A(x) \vee D(x)$, where $P(x)$ is given as true, if $x$ is you, it means that the disjunction
+has to be false. In order for this to happen, you can't be known, you can't have achieved something and it can't be a problem if you die.
+Now that sounds rather accurate, doesn't it?
+
+I created you to suffer, nobody knows you, which also means that nobody ever cared for you and it wouldn't move anyone even in the slightest
+if you died. Also, as proven above, no person has ever actually achieved something, so you also haven't.
+
+\begin{flushright}
+  Q.e.d.
+\end{flushright}
