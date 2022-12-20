@@ -1,0 +1,56 @@
+\section{Significance}
+
+So, you haven't achieved anything meaningful. That doesn't have to mean that you're insignificant. Maybe you're significant, because you have
+a weird name, like "X Æ A-12", or you're the father of someone called "X Æ A-12". People know you, so you're significant, but you haven't achieved
+anything.
+
+\vspace{.5cm}
+
+So, what does it mean to be significant? Does it mean that people know you? Does it mean that you achieved something meaningful?
+Does it mean that you dying would be a bad thing? Does it mean that I care about you?
+
+Well, everything except for that last part. I don't give a shit about any of you. Now let's define significance in a more formal manner.
+Let's use first order logic to codify humanity. We will start with $\Sigma$ and what the constants mean.
+
+$$
+\begin{aligned}
+  \Sigma &= \left( \right\{ \nicefrac{a}{0}, \nicefrac{e}{0} \left\}, \left\{ \nicefrac{P}{1}, \nicefrac{K}{1}, \nicefrac{A}{1}, \nicefrac{D}{1}, \nicefrac{C}{3} \right\} \right) \\
+  a &:= \text{"Adam"}, \\
+  e &:= \text{"Eve"}
+\end{aligned}
+$$
+After this definition we have the constants $a$ and $e$, representing Adam and Eve respectively.
+Now, let's define the predicates:
+
+$$
+\begin{aligned}
+  P(x) &:= \text{"} x \text{ is a person"}\\
+  K(x) &:= \text{"} x \text{ is known"}\\
+  A(x) &:= \text{"} x \text{ has achieved something meaningful"}\\
+  D(x) &:= \text{"} x \text{ dying would be a bad thing"}\\
+  C(x, y, z) &:= \text{"} x \text{ is child of } y \text{ and } z \text{"}
+\end{aligned}
+$$
+
+Now what does all this tell us so far? Well, we know that there are people. We also know that there are
+the constants $a$ and $e$, which, at least in this model, aren't considered people. We also know that $x$
+could be known ($K(x)$), $x$ could have achieved something meaningful ($A(x)$) and that $x$ dying could be
+a bad thing ($D(x)$). We also know that $x$ could be a child of $y$ and $z$ ($C(x, y, z)$).
+We can now already formulate some things about people. Let's do so.
+Here's the formula for significance:
+
+$$
+\text{isSignificant}(x) ::= P(x) \wedge \left(K(x) \vee A(x) \vee D(x)\right)
+$$
+And now, let's codify some of humanity:
+
+$$
+\begin{aligned}
+  \forall x &. P(x) \rightarrow \left(\exists y,z . C(x, y, z)\right) \vee C(x, a, e)\\
+  \exists x &. \text{isSignificant}(x)
+\end{aligned}
+$$
+
+At this point, we know that each person $x$ has a pair of parents. These could be other people, or the parents of $x$
+could be $a$ and $e$. We have also defined what it means to be significant. In our case it means that the formula $\text{isSignificant}(x)$
+is true for the given $x$. We have also said that there exists at least one person, who is significant.
