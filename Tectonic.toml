@@ -3,5 +3,5 @@ name = 'theUniverse'
 bundle = 'https://data1.fullyjustified.net/tlextras-2022.0r0.tar'
 
 [[output]]
-name = 'index'
+name = 'theUniverse'
 type = 'pdf'
